@@ -36,9 +36,9 @@ export default function AddPlot() {
 
     try {
 
-      const response = await axios.get(
-        "https://smartplot.onrender.com/plots"
-      );
+      const response = await  axios.get(
+  "https://smartplot.onrender.com/api/plots/plots"
+);
 
       setPlots(response.data);
 
@@ -106,9 +106,8 @@ export default function AddPlot() {
     try {
 
       await axios.delete(
-        `https://smartplot.onrender.com/plots/${id}`
-      );
-
+  `https://smartplot.onrender.com/api/plots/plots/${id}`
+);
       alert("Plot Deleted Successfully");
 
       fetchPlots();
