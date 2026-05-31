@@ -62,13 +62,10 @@ export default function AddPlot() {
 
     try {
 
-      await axios.post(
-
-        "https://smartplot.onrender.com/plots",
-
-        data
-
-      );
+      await await axios.post(
+  "https://smartplot.onrender.com/api/plots/plots",
+  data
+);
 
       alert("Plot Added Successfully");
 
