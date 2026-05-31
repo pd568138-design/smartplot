@@ -14,12 +14,12 @@ app.use(express.json());
 // Database Connection
 connectDB();
 
-// Test Route
+// Home Route
 app.get("/", (req, res) => {
   res.send("SmartPlot API Running");
 });
 
-// Routes
+// API Routes
 app.use("/api/plots", require("./routes/plotRoutes"));
 app.use("/api/auth", require("./routes/authRoutes"));
 
