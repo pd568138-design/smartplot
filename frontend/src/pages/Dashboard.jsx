@@ -13,7 +13,7 @@ export default function Dashboard(){
   const getSuggestions=async()=>{
 
     const response=await axios.post(
-      "http://localhost:5000/suggest-area",
+      "https://smartplot.onrender.com/suggest-area",
       {
         budget:Number(budget)
       }
