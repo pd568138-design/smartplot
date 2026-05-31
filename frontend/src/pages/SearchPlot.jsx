@@ -33,7 +33,7 @@ export default function SearchPlot() {
     try {
 
       const response = await axios.get(
-        "http://localhost:5000/plots"
+        "https://smartplot.onrender.com/plots"
       );
 
       setPlots(response.data);
@@ -60,7 +60,7 @@ export default function SearchPlot() {
 
       const response = await axios.post(
 
-        "http://localhost:5000/suggest-area",
+        "https://smartplot.onrender.com/suggest-area",
 
         {
           budget
@@ -86,7 +86,7 @@ export default function SearchPlot() {
 
       await axios.put(
 
-        `http://localhost:5000/book/${id}`,
+        `https://smartplot.onrender.com/book/${id}`,
 
         customer
 
@@ -112,7 +112,7 @@ export default function SearchPlot() {
 
       await axios.put(
 
-        `http://localhost:5000/cancel-booking/${id}`
+        `https://smartplot.onrender.com/cancel-booking/${id}`
 
       );
 
