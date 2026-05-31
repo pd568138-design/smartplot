@@ -146,7 +146,7 @@ export default function SearchPlot() {
         <h1>🏡 AI SmartPlot</h1>
 
         <button
-          onClick={() => navigate("/addplot")}
+          onClick={() => navigate("/add-plot")}
         >
           ➕ Add New Plot
         </button>
