@@ -1,10 +1,8 @@
-
 import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Login() {
-
   const navigate = useNavigate();
 
   const [data, setData] = useState({
@@ -13,11 +11,9 @@ export default function Login() {
   });
 
   const login = async () => {
-
     try {
-
       const response = await axios.post(
-        "https://smartplot.onrender.com/login",
+        "https://smartplot.onrender.com/api/auth/login",
         data
       );
 
@@ -27,37 +23,30 @@ export default function Login() {
       );
 
       alert("Login Successful");
-
       navigate("/dashboard");
 
     } catch (err) {
-
       alert(
         err.response?.data?.message ||
         "Login Failed"
       );
-
     }
-
   };
 
   return (
-
     <div className="auth-container">
-
       <div className="auth-card">
 
         <h1>AI SmartPlot</h1>
-
         <p>Login to continue</p>
 
         <input
           type="email"
           placeholder="Email"
-          onChange={(e)=>
+          onChange={(e) =>
             setData({
               ...data,
-              email:e.target.value
+              email: e.target.value
             })
           }
         />
@@ -65,10 +54,10 @@ export default function Login() {
         <input
           type="password"
           placeholder="Password"
-          onChange={(e)=>
+          onChange={(e) =>
             setData({
               ...data,
-              password:e.target.value
+              password: e.target.value
             })
           }
         />
@@ -78,20 +67,13 @@ export default function Login() {
         </button>
 
         <p className="switch-text">
-
           Don't have an account?
-
           <Link to="/register">
             Register
           </Link>
-
         </p>
 
       </div>
-
     </div>
-
   );
-
 }
-
