@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
@@ -18,7 +17,7 @@ export default function Register() {
     try {
 
       const response = await axios.post(
-        "https://smartplot.onrender.com/register",
+        "https://smartplot.onrender.com/api/auth/register",
         data
       );
 
@@ -50,10 +49,10 @@ export default function Register() {
         <input
           type="text"
           placeholder="Name"
-          onChange={(e)=>
+          onChange={(e) =>
             setData({
               ...data,
-              name:e.target.value
+              name: e.target.value
             })
           }
         />
@@ -61,10 +60,10 @@ export default function Register() {
         <input
           type="email"
           placeholder="Email"
-          onChange={(e)=>
+          onChange={(e) =>
             setData({
               ...data,
-              email:e.target.value
+              email: e.target.value
             })
           }
         />
@@ -72,10 +71,10 @@ export default function Register() {
         <input
           type="password"
           placeholder="Password"
-          onChange={(e)=>
+          onChange={(e) =>
             setData({
               ...data,
-              password:e.target.value
+              password: e.target.value
             })
           }
         />
@@ -101,4 +100,3 @@ export default function Register() {
   );
 
 }
-
