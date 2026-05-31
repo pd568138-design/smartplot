@@ -16,11 +16,10 @@ export default function Register() {
 
     try {
 
-      const response = await axios.post(
-        "https://smartplot.onrender.com/api/auth/register",
-        data
-      );
-
+     const response = await axios.post(
+  "https://smartplot.onrender.com/api/auth/register",
+  data
+);
       alert(response.data.message);
 
       navigate("/");
