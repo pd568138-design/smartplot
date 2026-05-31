@@ -12,13 +12,12 @@ export default function Dashboard(){
 
   const getSuggestions=async()=>{
 
-    const response=await axios.post(
-      "https://smartplot.onrender.com/suggest-area",
-      {
-        budget:Number(budget)
-      }
-    );
-
+   const response = await axios.post(
+  "https://smartplot.onrender.com/api/plots/suggest-area",
+  {
+    budget: Number(budget)
+  }
+);
     setSuggestions(response.data);
 
   };
